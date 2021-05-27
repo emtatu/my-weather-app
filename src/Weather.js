@@ -2,30 +2,32 @@ import React, { useState } from 'react'
 import axios from "axios"
 import Button from 'react-bootstrap/Button';
 import { Form, FormControl } from 'react-bootstrap';
-import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
+//import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 
 
 
 export default function Weather() {
-    const [ready, setReady] = useState(false)
-    const [weatherData, setWeatherData] = useState({});
+
+    const [weatherData, setWeatherData] = useState({ ready: false });
     function handleResponse(response) {
         console.log(response.data)
         setWeatherData({
+            ready: true,
             temperature: response.data.main.temp,
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             pressure: response.data.main.pressure,
             city: response.data.name,
+            date: "Wednesday, 14:56",
             description: response.data.weather[0].description,
             iconUrl: `https://ssl.gstatic.com/onebox/weather/64/sunny.png`,
             maxTemperature: response.data.main.temp_max,
             minTemperature: response.data.main.temp_min
 
         })
-        setReady(true)
+
     }
-    if (ready) {
+    if (weatherData.ready) {
         return (
             <div className="Weather-app">
                 <Form inline className="Form" >
@@ -56,8 +58,8 @@ export default function Weather() {
                         <div className="col-5 text-start">
                             <h3 className="geo-location text-center">{weatherData.city}</h3>
                             <ul className="mt-2 pt-1">
-                                <li> Tuesday, 20 may </li>
-                                <li> 15:44</li>
+                                <li> {weatherData.date} </li>
+
                                 <li className="text-capitalize"> {weatherData.description} </li>
 
                             </ul>
@@ -71,8 +73,8 @@ export default function Weather() {
 
                         <div className="col-3 text-start mt-3 pt-3">
                             <ul>
-                                <li> Max-temp: {Math.round(weatherData.maxTemperature)}°C </li>
-                                <li> Min-temp: {Math.round(weatherData.minTemperature)}°C</li>
+                                <li> Max: {Math.round(weatherData.maxTemperature)}°C </li>
+                                <li> Min: {Math.round(weatherData.minTemperature)}°C</li>
                             </ul>
                         </div>
 
