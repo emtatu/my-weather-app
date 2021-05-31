@@ -47,10 +47,10 @@
 
   color: white;
 }
-.App-body .row img {
+.App-body .row canvas {
   float: left;
-  width: 100px;
-  height: 100px;
+  padding-top: 10px;
+  padding-right: 10px;
   margin: 0em;
 }
 .degrees-content {
