@@ -10,7 +10,7 @@ export default function App() {
 
       <div className="bg_image">
         <Container className="Container"  >
-          <Weather />
+          <Weather defaultCity="Brussels" />
           <footer>
             <p className=" ">
               This project was coded by <a href="https://www.linkedin.com/in/emiliatatu">Emilia Tatu</a> and is outsounrced.
