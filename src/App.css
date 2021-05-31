@@ -38,6 +38,15 @@
 .input-container {
   width: 100%;
 }
+
+.btn-color {
+  background-color: #5bc8a8 !important;
+  border-color: #5bc8a8 !important;
+}
+.btn-location {
+  background-color: #877871 !important;
+  border-color: #877871 !important;
+}
 .App-body,
 .Form {
   padding: 1em;
@@ -55,6 +64,10 @@
 }
 .degrees-content {
   display: flex;
+}
+.color-fahrenheit,
+.color-celsius {
+  color: #5bc8a8;
 }
 .row .degrees {
   font-weight: 500;

@@ -55,15 +55,15 @@ export default function Weather(props) {
                             <FormControl type="text" placeholder="Search for a city.." className=" form-control mr-sm-2 input-lenght" autoFocus="on" onChange={handleCityChange} />
                         </div>
                         <div className="col-2" >
-                            <Button type="submit" className="submit-button" >Submit</Button>
+                            <Button type="submit" className="submit-button btn-color" >Submit</Button>
                         </div>
                         <div className="col-2" >
-                            <Button type="submit" className="location-button" >Location</Button>
+                            <Button type="submit" className="location-button btn-location" >Location</Button>
                         </div>
                     </div>
                 </Form>
                 <WeatherInfo data={weatherData} />
-            </div>
+            </div >
         );
     } else {
         search();
