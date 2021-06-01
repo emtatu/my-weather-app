@@ -54,22 +54,6 @@ export default function WeatherInfo(props) {
 
 
                 </div>
-                <div className="future-predictions" >
-                    <div className="row">
-                        <div className="col">
-                            <ul>
-                                <li>
-                                    14:00
-                                </li>
-
-                                <li>img</li>
-                                <li>
-                                    15°C
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
             </div >
         </div >
