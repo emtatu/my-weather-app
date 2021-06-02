@@ -6,7 +6,7 @@ export default function WeatherInfo(props) {
     return (
 
 
-        <div class="weatherInfo   ">
+        <div className="weatherInfo   ">
             <div className="App-body ">
 
                 <div className="row">
@@ -28,8 +28,8 @@ export default function WeatherInfo(props) {
                             <li className="text-capitalize"> {props.data.description} </li>
 
                         </ul>
-                        <div class="clearfix">
-                            <div class="float">
+                        <div className="clearfix">
+                            <div className="float">
                                 <WeatherIcon code={props.data.icon} title={props.data.description} />
 
                             </div>
