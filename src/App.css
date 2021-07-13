@@ -10,6 +10,7 @@
   background-size: cover;
   width: 100%;
   height: 100%;
+  padding: auto;
 }
 
 .Weather-app {
@@ -17,12 +18,20 @@
 
   min-height: 10vh;
   padding: 20px;
+
   border: 1px transparent salmon;
   align-items: right;
   text-align: left;
-  width: 600px;
+  width: 60vw;
   border-radius: 7%;
   margin: 0 auto;
+  @media (min-width: 320px) {
+    text-align: center;
+    width: 40vw;
+    height: 40vh;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 .input-lenght {
@@ -34,6 +43,13 @@
   font-family: arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
+  @media (min-width: 320px);
+  font-size: 7px;
+  color: white;
+  text-align: center;
+  font-family: arial, sans-serif;
+
+  font-weight: 200;
 }
 .input-container {
   width: 100%;
@@ -61,9 +77,18 @@
   padding-top: 10px;
   padding-right: 10px;
   margin: 0em;
+  @media (min-width: 320px) {
+    text-align: center;
+    width: 40vw;
+    height: 40vh;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 .degrees-content {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .color-fahrenheit,
 .color-celsius {
@@ -72,6 +97,10 @@
 .row .degrees {
   font-weight: 500;
   font-size: 60px;
+  @media (min-width: 320px;) {
+    font-weight: 200px;
+    font-size: 40px;
+  }
 }
 .row .temp-unit {
   display: inline;
@@ -85,4 +114,9 @@
 }
 .App-body ul {
   list-style-type: none;
+  @media (max-width: 320px;) {
+    font-weight: 100px;
+    font-size: 10px;
+    color: red;
+  }
 }

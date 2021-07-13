@@ -3,18 +3,27 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from "./Weather"
 import { Container } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
+
+
+
+
 
 export default function App() {
+
+
   return (
+
     <div className="App  ">
 
       <div className="bg_image">
-        <Container className="Container"  >
+
+        <Container className="Container container-fluid"   >
           <Weather defaultCity="Brussels" />
           <footer>
             <p className=" ">
               This project was coded by <a href="https://www.linkedin.com/in/emiliatatu">Emilia Tatu</a> and is outsounrced.
-          </p>
+            </p>
 
           </footer>
         </Container >

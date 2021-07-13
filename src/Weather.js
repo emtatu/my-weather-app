@@ -13,6 +13,7 @@ export default function Weather(props) {
 
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(props.defaultCity);
+
     function handleResponse(response) {
         console.log(response.data);
         setWeatherData({
@@ -24,6 +25,7 @@ export default function Weather(props) {
             wind: response.data.wind.speed,
             pressure: response.data.main.pressure,
             city: response.data.name,
+
             date: new Date(response.data.dt * 1000),
             description: response.data.weather[0].description,
             icon: response.data.weather[0].icon,
@@ -47,6 +49,7 @@ export default function Weather(props) {
     function handleCityChange(event) {
         setCity(event.target.value);
     }
+
     if (weatherData.ready) {
         return (
             <div className="Weather-app">
@@ -57,12 +60,10 @@ export default function Weather(props) {
                         <div className="col-8"  >
                             <FormControl type="text" placeholder="Search for a city.." className=" form-control mr-sm-2 input-lenght" autoFocus="on" onChange={handleCityChange} />
                         </div>
-                        <div className="col-2" >
-                            <Button type="submit" className="submit-button btn-color" >Submit</Button>
+                        <div className="col-4" >
+                            <Button type="submit" className="submit-button btn-color">Submit</Button>
                         </div>
-                        <div className="col-2" >
-                            <Button type="submit" className="location-button btn-location" >Location</Button>
-                        </div>
+
                     </div>
                 </Form>
                 <WeatherInfo data={weatherData} />
