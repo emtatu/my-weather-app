@@ -9,8 +9,8 @@ export default function WeatherInfo(props) {
         <div className="weatherInfo   ">
             <div className="App-body ">
 
-                <div className="row">
-                    <div className="col-4 geo-location text-center ">
+                <div className="row weather-container">
+                    <div className="col-md-4 col-sm-12 geo-location text-center ">
                         <ul className="mt-3 pt-4">
 
                             <li>Humidity: {props.data.humidity} %</li>
@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
                             <li>Pressure: {props.data.pressure}/ph</li>
                         </ul>
                     </div>
-                    <div className="col-4 geo-location text-center">
+                    <div className="col-md-4 col-sm-12 cityname geo-location text-center">
                         <h3 >{props.data.city}</h3>
                         <ul className="mt-2 pt-1">
                             <li>
@@ -43,7 +43,7 @@ export default function WeatherInfo(props) {
 
                     </div>
 
-                    <div className="col-4 geo-location text-center mt-3 pt-3">
+                    <div className="col-md-4 col-sm-12 geo-location text-center mt-3 pt-3">
                         <ul>
                             <li> Max: {Math.round(props.data.maxTemperature)}°C </li>
                             <li> Min: {Math.round(props.data.minTemperature)}°C</li>

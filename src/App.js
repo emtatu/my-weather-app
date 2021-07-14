@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from "./Weather"
 import { Container } from 'react-bootstrap';
-import { useMediaQuery } from 'react-responsive';
+
 
 
 
