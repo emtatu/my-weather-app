@@ -15,7 +15,7 @@
 
 .Weather-app {
   background-color: rgba(65, 43, 68, 0.651);
-
+  padding-top: 50px;
   min-height: 10vh;
   padding: 20px;
 
@@ -45,10 +45,7 @@
   background-color: #5bc8a8 !important;
   border-color: #5bc8a8 !important;
 }
-.btn-location {
-  background-color: #877871 !important;
-  border-color: #877871 !important;
-}
+
 .App-body,
 .Form {
   padding: 1em;
