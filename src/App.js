@@ -18,7 +18,7 @@ export default function App() {
 
       <div className="bg_image">
 
-        <Container className="Container container-fluid"   >
+        <Container className="Container container-fluid "   >
           <Weather defaultCity="Brussels" />
           <footer>
             <p className=" ">
